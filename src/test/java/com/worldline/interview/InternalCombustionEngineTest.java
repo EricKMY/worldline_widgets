@@ -15,26 +15,26 @@ public class InternalCombustionEngineTest {
     }
 
     @Test
-    public void zero_widgets_with_wood_fuel() {
+    public void zero_widgets_with_petrol_fuel() {
         internalCombustionEngine.fill(FuelType.PETROL, 1);
         assertEquals(0, widgetMachine.produceWidgets(0));
     }
 
     @Test
-    public void one_widgets_with_wood_fuel() {
+    public void eight_widgets_with_petrol_fuel() {
         internalCombustionEngine.fill(FuelType.PETROL, 1);
         assertEquals(9, widgetMachine.produceWidgets(8));
     }
 
 
     @Test
-    public void four_widgets_with_wood_fuel() {
+    public void sixteen_widgets_with_petrol_fuel() {
         internalCombustionEngine.fill(FuelType.PETROL, 1);
         assertEquals(18, widgetMachine.produceWidgets(16));
     }
 
     @Test
-    public void two_widgets_with_coal_fuel() {
+    public void one_widgets_with_diesel_fuel() {
         internalCombustionEngine = new InternalCombustionEngine(FuelType.DIESEL);
         widgetMachine = new WidgetMachine(internalCombustionEngine);
         internalCombustionEngine.fill(FuelType.DIESEL, 1);
